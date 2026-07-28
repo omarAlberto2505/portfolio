@@ -1,0 +1,50 @@
+@use "sass:map";
+@use './_decade-1920-1930' as decade_1920_1930;
+@use './_decade-1940-1950' as decade_1940_1950;
+@use './_decade-1960-1970' as decade_1960_1970;
+@use './_decade-1980-1990' as decade_1980_1990;
+@use './_decade-2000-2010' as decade_2000_2010;
+@use './_decade-2020' as decade_2020;
+@use './_decade-2030' as decade_2030;
+
+$decades-styles: (
+    "decade_1920_1930": decade_1920_1930.$decade_1920_1930,
+    "decade_1940_1950": decade_1940_1950.$decade_1940_1950,
+    "decade_1960_1970": decade_1960_1970.$decade_1960_1970,
+    "decade_1980_1990": decade_1980_1990.$decade_1980_1990,
+    "decade_2000_2010": decade_2000_2010.$decade_2000_2010,
+    "decade_2020": decade_2020.$decade_2020,
+    "decade_2030": decade_2030.$decade_2030,
+);
+
+
+@mixin load_decades_themes {
+    // Set a sensible default on :root using the first map entry
+    $keys: map.keys($decades-styles);
+    $first-key: nth($keys, 1);
+    $first-decade: map.get($decades-styles, $first-key);
+
+    :root {
+         --font-body: 'Inter', system-ui, sans-serif;
+        --background-color: #{map.get($first-decade, "background-color")};
+        --text-color: map.get($first-decade, "text-color");
+        --main-color: map.get($first-decade, "main-color");
+        --color-accent: #{map.get($first-decade, "color-accent")};
+        --decade-background: if(map.has-key($first-decade, "background-image"), map.get($first-decade, "background-image"), none);
+        --background-gradient: linear-gradient(135deg, #e0f2fe, #f8fafc);
+    }
+
+    // Scope each theme to html[data-theme="<key>"] so values come from the attribute
+    @each $key, $decade in $decades-styles {
+        html[data-theme="#{$key}"] {
+             --font-body: #{map.get($decade, "font-body")};
+            --background-color: #{map.get($decade, "background-color")};
+            --text-color: #{map.get($decade, "text-color")};
+            --main-color: #{map.get($decade, "main-color")};
+            --color-accent: #{map.get($decade, "color-accent")};
+            --decade-background: #{if(map.has-key($decade, "background-image"), map.get($decade, "background-image"), none)};
+            --background-gradient: #{map.get($decade, "background-gradient")};
+        }
+    }
+
+}

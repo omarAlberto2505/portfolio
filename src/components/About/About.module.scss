@@ -1,0 +1,49 @@
+.section {
+  padding: var(--spacing-section) 0;
+  color: var(--main-color);
+}
+
+.sectionHeading {
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+.sectionHeading span {
+  display: inline-block;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-accent);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: var(--font-size-xs);
+}
+
+.sectionHeading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 2.75vw, 3rem);
+  line-height: 1.05;
+  color: var(--color-text);
+}
+
+.contentGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.aboutDetails {
+  display: grid;
+  gap: var(--spacing-base);
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.aboutDetails div {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.aboutDetails strong {
+  color: var(--color-text);
+}
