@@ -2,61 +2,21 @@ import { Decade, DecadeSelectorProps } from './types';
 import clsx from 'clsx';
 import css from './DecadeSelector.module.scss';
 import useDecadeStore from '../../store/useDecadeStore';
+import { decades } from './specs';
 
-const decades: Decade[] = [
-  {
-    value: '1920-1930',
-    label: 'Roaring Jazz / Dusty Grit',
-    personality:
-      'Skill: polished frontend delivery. Strength: reliable execution and persistence under pressure.',
-  },
-  {
-    value: '1940-1950',
-    label: 'Victory March / Retro Cool',
-    personality:
-      'Skill: clean system architecture. Strength: disciplined implementation with attention to detail.',
-  },
-  {
-    value: '1960-1970',
-    label: 'Free Spirit / Electric Groove',
-    personality:
-      'Skill: creative interface design. Strength: rapid problem solving and practical experimentation.',
-  },
-  {
-    value: '1980-1990',
-    label: 'Neon Drive / Startup Hustle',
-    personality:
-      'Skill: modern JavaScript and TypeScript development. Strength: fast prototyping and getting work into production quickly.',
-  },
-  {
-    value: '2000-2010',
-    label: 'Dotcom Edge / Mobile Pulse',
-    personality:
-      'Skill: API development and responsive web apps. Strength: building mobile-ready, user-focused systems.',
-  },
-  {
-    value: '2020',
-    label: 'AI Wave',
-    personality:
-      'Skill: AI integrations and automation. Strength: cloud-native platform engineering and intelligent system design.',
-  },
-  {
-    value: '2030',
-    label: 'Future Vision',
-    personality:
-      'Skill: scalable architecture and future-focused platform work. Strength: building AI-enabled services with practical product thinking.',
-  },
-];
 
 function DecadeSelector({ headerHeight }: DecadeSelectorProps) {
   const selectedDecade = useDecadeStore((s) => s.decade);
   const setSelectedDecade = useDecadeStore((s) => s.setDecade);
 
+  const backgroundImage = decades.find(d => d.value == selectedDecade)?.background
+
   return (
     <aside
       className={clsx(css['decade-panel'])}
       style={{
-        top: `${headerHeight + 10}px`
+        top: `${headerHeight + 10}px`,
+        backgroundImage: `url(${backgroundImage})`
       }}
     >
       <div className={clsx(css['decade-panel-inner'])}>

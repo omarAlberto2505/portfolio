@@ -8,4 +8,5 @@ export interface Decade {
   value: string;
   label: string;
   personality: string;
+  background: string;
 }
