@@ -1,11 +1,11 @@
 import { Decade } from "./types";
-import bg1920 from '../../assets/1920-background.png';
-import bg1940 from '../../assets/1940-background.png';
-import bg1960 from '../../assets/1960-background.png';
-import bg1980 from '../../assets/1980-background.png';
-import bg2000 from '../../assets/2000-background.png';
-import bg2020 from '../../assets/2020-background.png';
-import bg2030 from '../../assets/2030-background.png';
+import bg1920 from '../../assets/1920-Background.webp';
+import bg1940 from '../../assets/1940-Background.webp';
+import bg1960 from '../../assets/1960-Background.webp';
+import bg1980 from '../../assets/1980-Background.webp';
+import bg2000 from '../../assets/2000-Background.webp';
+import bg2020 from '../../assets/2020-Background.webp';
+import bg2030 from '../../assets/2030-Background.webp';
 
 
 // Map decade -> asset URL (partial routing for assets)

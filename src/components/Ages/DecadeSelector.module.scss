@@ -10,7 +10,7 @@
   box-shadow: 0 30px 80px rgba(15, 23, 42, 0.22);
   overflow: hidden;
   // background-image: var(--decade-background);
-  // background-image: url("../../../public/assets/1920-background.png");
+  // background-image: url("../../../public/assets/1920-Background.webp");
   background-position: 0%;
   background-size: cover;
 }
@@ -38,7 +38,7 @@
 .decade-panel .section-heading {
   color: var(--text-color, #94a3b8);
   text-align: end;
-  
+
   .section-subtitle{
     color: var(--background-color);
   }
