@@ -1,0 +1,28 @@
+.siteFooter {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  background-color: var(--color-surface-strong);
+  color: var(--color-surface);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.footerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.footerLinks a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}

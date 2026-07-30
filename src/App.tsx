@@ -7,6 +7,7 @@ import Experience from './components/Experience/';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import DecadeSelector from './components/Ages/DecadeSelector';
+import Footer from './components/Footer';
 import useHeaderHeight from './hooks/useHeaderHeight';
 import useDecadeStore from './store/useDecadeStore';
 import { profile, skills, experience, projects, contact, resumeUrl } from './data';
@@ -34,6 +35,19 @@ function App() {
   const headerHeight = useHeaderHeight(headerRef);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const selectedDecade = useDecadeStore((s) => s.decade);
+  const decadeBackground = selectedDecade === '1920-1930'
+    ? bg1920
+    : selectedDecade === '1940-1950'
+      ? bg1940
+      : selectedDecade === '1960-1970'
+        ? bg1960
+        : selectedDecade === '1980-1990'
+          ? bg1980
+          : selectedDecade === '2000-2010'
+            ? bg2000
+            : selectedDecade === '2020'
+              ? bg2020
+              : bg2030;
 
   // keep html[data-theme] in sync with the selected decade
   useEffect(() => {
@@ -55,17 +69,7 @@ function App() {
           <Contact contact={contact} resumeUrl={resumeUrl} />
         </main>
       </div>
-      <footer className="site-footer">
-        <div className="container footer-inner">
-          <p>© 2026 Omar Alberto Murillo Moreno. Built for GitHub Pages.</p>
-          <div className="footer-links">
-            <a href="#home">Top</a>
-            <a href={profile.githubUrl} target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer profile={profile} backgroundImage={decadeBackground} />
     </div>
   );
 }
