@@ -1,17 +1,22 @@
 import { Decade } from "./types";
 import bg1920 from '../../assets/1920-background.png';
 import bg1940 from '../../assets/1940-background.png';
-import genericBackground from "../../assets/generic-background.png";
+import bg1960 from '../../assets/1960-background.png';
+import bg1980 from '../../assets/1980-background.png';
+import bg2000 from '../../assets/2000-background.png';
+import bg2020 from '../../assets/2020-background.png';
+import bg2030 from '../../assets/2030-background.png';
+
 
 // Map decade -> asset URL (partial routing for assets)
 const decadeAssets: Record<string, string | null> = {
     '1920-1930': bg1920,
     '1940-1950': bg1940,
-    '1960-1970': genericBackground,
-    '1980-1990': genericBackground,
-    '2000-2010': genericBackground,
-    '2020': genericBackground,
-    '2030': genericBackground,
+    '1960-1970': bg1960,
+    '1980-1990': bg1980,
+    '2000-2010': bg2000,
+    '2020': bg2020,
+    '2030': bg2030,
 };
 
 export function getDecadeAsset(decadeValue: string): string | null {

@@ -10,8 +10,26 @@ import DecadeSelector from './components/Ages/DecadeSelector';
 import useHeaderHeight from './hooks/useHeaderHeight';
 import useDecadeStore from './store/useDecadeStore';
 import { profile, skills, experience, projects, contact, resumeUrl } from './data';
+import { preload } from 'react-dom';
+import bg1920 from './assets/1920-background.png';
+import bg1940 from './assets/1940-background.png';
+import bg1960 from './assets/1960-background.png';
+import bg1980 from './assets/1980-background.png';
+import bg2000 from './assets/2000-background.png';
+import bg2020 from './assets/2020-background.png';
+import bg2030 from './assets/2030-background.png';
+
 
 function App() {
+
+  preload(bg1920, { as: 'image' });
+  preload(bg1940, { as: 'image' });
+  preload(bg1960, { as: 'image' });
+  preload(bg1980, { as: 'image' });
+  preload(bg2000, { as: 'image' });
+  preload(bg2020, { as: 'image' });
+  preload(bg2030, { as: 'image' });
+
   const headerRef = useRef<HTMLElement | null>(null);
   const headerHeight = useHeaderHeight(headerRef);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);

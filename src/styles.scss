@@ -1,11 +1,4 @@
 @use "./theme/load_decades_themes";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap');
-
 
 @include load_decades_themes.load_decades_themes;
 :root {

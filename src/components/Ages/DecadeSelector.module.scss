@@ -37,7 +37,8 @@
 
 .decade-panel .section-heading {
   color: var(--text-color, #94a3b8);
-
+  text-align: end;
+  
   .section-subtitle{
     color: var(--background-color);
   }
@@ -46,7 +47,7 @@
 
 
 .decade-panel .section-heading span {
-  color: var(--main-color, #38bdf8);
+  color: var(--background-color);
   font-size: 0.75rem;
   letter-spacing: 0.18em;
 }
@@ -91,11 +92,12 @@
 }
 
 .decade-personality {
-  padding: 1rem 1.25rem;
-  border-radius: 1.5rem;
-  background: rgba(30, 41, 59, 0.9);
-  opacity: 0.6;
-  color: var(--text-color, #cbd5e1);
-  border: 1px solid rgba(94, 113, 145, 0.22);
-  line-height: 1.75;
+  min-height: 9rem;
+  // padding: 1rem 1.25rem;
+  // border-radius: 1.5rem;
+  // background: rgba(30, 41, 59, 0.9);
+  // opacity: 0.6;
+  // color: var(--text-color, #cbd5e1);
+  // border: 1px solid rgba(94, 113, 145, 0.22);
+  // line-height: 1.75;
 }

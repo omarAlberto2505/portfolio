@@ -40,7 +40,7 @@ function DecadeSelector({ headerHeight }: DecadeSelectorProps) {
           ))}
         </div>
         <div className={clsx(css['decade-personality'])}>
-          {decades.find((item) => item.value === selectedDecade)?.personality}
+          {/* {decades.find((item) => item.value === selectedDecade)?.personality} */}
         </div>
       </div>
     </aside>
