@@ -21,8 +21,8 @@ function About({ profile }: AboutProps) {
               with cloud-native architecture, API design, and intelligent tooling.
             </p>
             <p>
-              I have delivered solutions across React, TypeScript, JavaScript, Go, Python, and SQL while
-              leveraging Docker, AWS, Kubernetes, and enterprise integration patterns.
+              I have delivered solutions across React, Angular, TypeScript, JavaScript, Go, Python, Ruby on Rails, Net Core and SQL while
+              leveraging Docker, AWS, Github Actions, Kubernetes, and enterprise integration patterns.
             </p>
           </div>
           <div className={styles.aboutDetails}>

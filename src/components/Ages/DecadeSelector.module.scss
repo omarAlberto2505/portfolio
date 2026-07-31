@@ -40,14 +40,14 @@
   text-align: end;
 
   .section-subtitle{
-    color: var(--background-color);
+    color:  var(--text-color);
   }
 }
 
 
 
 .decade-panel .section-heading span {
-  color: var(--background-color);
+  color: var(--text-color);
   font-size: 0.75rem;
   letter-spacing: 0.18em;
 }
@@ -75,14 +75,14 @@
   background: var(--background-color);
   border: 1px solid var(--background-color);
   border-radius: 1.2rem;
-  color: var(--text-color, #cbd5e1);
+  color: var(--secondary-color);
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .decade-bubble strong {
   font-size: 0.9rem;
-  color: var(--text-color, #e2e8f0);
+  color: var(--secondary-color);
 }
 
 .decade-bubble:hover,

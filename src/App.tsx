@@ -1,16 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Experience from './components/Experience/';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import DecadeSelector from './components/Ages/DecadeSelector';
-import Footer from './components/Footer';
-import useHeaderHeight from './hooks/useHeaderHeight';
-import useDecadeStore from './store/useDecadeStore';
-import { profile, skills, experience, projects, contact, resumeUrl } from './data';
+import { useEffect, useRef, useState } from 'react';
 import { preload } from 'react-dom';
 import bg1920 from './assets/1920-background.webp';
 import bg1940 from './assets/1940-background.webp';
@@ -19,6 +7,18 @@ import bg1980 from './assets/1980-background.webp';
 import bg2000 from './assets/2000-background.webp';
 import bg2020 from './assets/2020-background.webp';
 import bg2030 from './assets/2030-background.webp';
+import About from './components/About';
+import DecadeSelector from './components/Ages/DecadeSelector';
+import Contact from './components/Contact';
+import Experience from './components/Experience/';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import { contact, experience, profile, projects, resumeUrl } from './data';
+import useHeaderHeight from './hooks/useHeaderHeight';
+import useDecadeStore from './store/useDecadeStore';
 
 
 function App() {
@@ -35,19 +35,6 @@ function App() {
   const headerHeight = useHeaderHeight(headerRef);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const selectedDecade = useDecadeStore((s) => s.decade);
-  const decadeBackground = selectedDecade === '1920-1930'
-    ? bg1920
-    : selectedDecade === '1940-1950'
-      ? bg1940
-      : selectedDecade === '1960-1970'
-        ? bg1960
-        : selectedDecade === '1980-1990'
-          ? bg1980
-          : selectedDecade === '2000-2010'
-            ? bg2000
-            : selectedDecade === '2020'
-              ? bg2020
-              : bg2030;
 
   // keep html[data-theme] in sync with the selected decade
   useEffect(() => {
@@ -63,13 +50,13 @@ function App() {
         <main>
           <Hero profile={profile} />
           <About profile={profile} />
-          <Skills skills={skills} />
+          <Skills />
           <Experience experience={experience} />
           <Projects projects={projects} />
           <Contact contact={contact} resumeUrl={resumeUrl} />
         </main>
       </div>
-      <Footer profile={profile} backgroundImage={decadeBackground} />
+      <Footer profile={profile} />
     </div>
   );
 }

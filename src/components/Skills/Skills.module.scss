@@ -28,6 +28,8 @@
   display: grid;
   gap: var(--spacing-md);
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  cursor: pointer;
+
 }
 
 .skillCard {
@@ -35,6 +37,10 @@
   background: var(--color-surface);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+
+  &:hover {
+    background: var(--background-gradient);
+  }
 }
 
 .skillCard h3,

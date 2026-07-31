@@ -18,7 +18,7 @@ function Experience({ experience }: ExperienceProps) {
             <article key={`${item.company}-${item.period}`} className={styles.timelineItem}>
               <h3>{item.role}</h3>
               <span>{`${item.company} · ${item.location} · ${item.period}`}</span>
-              <p>{item.description}</p>
+              {item.description}
             </article>
           ))}
         </div>

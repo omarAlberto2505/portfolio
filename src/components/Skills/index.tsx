@@ -1,11 +1,8 @@
-import type { Skill } from '../../data';
+import { skills } from './data';
 import styles from './Skills.module.scss';
 
-interface SkillsProps {
-  skills: Skill[];
-}
 
-function Skills({ skills }: SkillsProps) {
+function Skills() {
   return (
     <section className={styles.section} id="skills">
       <div className="container">

@@ -38,10 +38,13 @@ $decades-styles: (
     @each $key, $decade in $decades-styles {
         html[data-theme="#{$key}"] {
             font-weight: #{map.get($decade, "font-weight")};
-             --font-body: #{map.get($decade, "font-body")};
+
+        
+            --font-body: #{map.get($decade, "font-body")};
             --background-color: #{map.get($decade, "background-color")};
             --text-color: #{map.get($decade, "text-color")};
             --main-color: #{map.get($decade, "main-color")};
+            --secondary-color:  #{map.get($decade, "secondary-color")};
             --color-accent: #{map.get($decade, "color-accent")};
             --decade-background: #{if(map.has-key($decade, "background-image"), map.get($decade, "background-image"), none)};
             --background-gradient: #{map.get($decade, "background-gradient")};

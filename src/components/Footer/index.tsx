@@ -1,15 +1,20 @@
 import type { CSSProperties } from 'react';
 import styles from './Footer.module.scss';
 import clsx from 'clsx';
+import useDecadeStore from '../../store/useDecadeStore';
+import { decades } from '../Ages/specs';
 
 interface FooterProps {
   profile: {
     githubUrl: string;
   };
-  backgroundImage?: string;
 }
 
-function Footer({ profile, backgroundImage }: FooterProps) {
+function Footer({ profile }: FooterProps) {
+  const selectedDecade = useDecadeStore((s) => s.decade);
+  const backgroundImage = decades.find(d => d.value == selectedDecade)?.background
+
+
   const footerStyle: CSSProperties | undefined = backgroundImage
     ? {
         backgroundImage: `url(${backgroundImage})`,
