@@ -38,7 +38,7 @@ export const profile: Profile = {
   title: 'Full-stack Engineer | AI Agent Platforms',
   location: 'Juarez City, Chihuahua, Mexico',
   email: 'omaralberto7276@gmail.com',
-  education: 'Bachelor of Mechatronic Engineering, ITCJ',
+  education: 'BA Mecathronic Engineering',
   summary: 'I specialize in modern web applications, APIs, and AI agent platforms. I build reliable, high-performance systems using React, TypeScript, Go, Python, and cloud-native architecture.',
   heroCopy:
     'I build modern, responsive web experiences that help teams turn ideas into polished digital products while delivering maintainable backend services, AI integrations, and enterprise-grade APIs.',
@@ -114,4 +114,3 @@ export const contact: Contact = {
     'I’m available for full-stack and AI platform work. Reach out to discuss your next engineering or cloud project.',
 };
 
-export const resumeUrl = '/resume.pdf';

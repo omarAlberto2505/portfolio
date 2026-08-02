@@ -16,7 +16,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
-import { contact, experience, profile, projects, resumeUrl } from './data';
+import { contact, experience, profile, projects } from './data';
 import useHeaderHeight from './hooks/useHeaderHeight';
 import useDecadeStore from './store/useDecadeStore';
 
@@ -53,7 +53,7 @@ function App() {
           <Skills />
           <Experience experience={experience} />
           <Projects projects={projects} />
-          <Contact contact={contact} resumeUrl={resumeUrl} />
+          <Contact contact={contact} resumeUrl={"../Omars Resume.pdf"} />
         </main>
       </div>
       <Footer profile={profile} />

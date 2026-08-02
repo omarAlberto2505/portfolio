@@ -34,6 +34,5 @@ If you want the site to publish at `https://<username>.github.io/`, name the rep
 
 ## Next steps
 
-- Replace placeholder text with your real name, email, experience, and projects.
 - Add links to your GitHub profile and live projects.
 - Optionally add a profile image or resume download button.
