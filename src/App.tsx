@@ -19,7 +19,7 @@ import Skills from './components/Skills';
 import { contact, experience, profile, projects } from './data';
 import useHeaderHeight from './hooks/useHeaderHeight';
 import useDecadeStore from './store/useDecadeStore';
-
+import ResumeURl from "./assets/Omars Resume.pdf"
 
 function App() {
 
@@ -53,7 +53,7 @@ function App() {
           <Skills />
           <Experience experience={experience} />
           <Projects projects={projects} />
-          <Contact contact={contact} resumeUrl={"../Omars Resume.pdf"} />
+          <Contact contact={contact} resumeUrl={ResumeURl} />
         </main>
       </div>
       <Footer profile={profile} />
