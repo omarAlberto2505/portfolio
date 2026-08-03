@@ -16,8 +16,32 @@ function Projects({ projects }: ProjectsProps) {
         <div className={styles.projectsGrid}>
           {projects.map((project) => (
             <article key={project.title} className={styles.projectCard}>
-              <h3>{project.title}</h3>
+              <div className={styles.projectTitle}>
+                <h3>{project.title}</h3>
+                {project.status && <span className={styles.status}>{project.status}</span>}
+              </div>
               <p>{project.description}</p>
+              {project.stack && (
+                <ul className={styles.stack}>
+                  {project.stack.map((tech) => (
+                    <li key={tech}>{tech}</li>
+                  ))}
+                </ul>
+              )}
+              {project.links && (
+                <div className={styles.links}>
+                  {project.links.map((link) => (
+                    <a
+                      key={link.url}
+                      href={link.url}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              )}
             </article>
           ))}
         </div>

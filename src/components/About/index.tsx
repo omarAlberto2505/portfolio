@@ -24,6 +24,11 @@ function About({ profile }: AboutProps) {
               I have delivered solutions across React, Angular, TypeScript, JavaScript, Go, Python, Ruby on Rails, Net Core and SQL while
               leveraging Docker, AWS, Github Actions, Kubernetes, and enterprise integration patterns.
             </p>
+            <p>
+              Beyond the code, I mentor teammates through pair programming and knowledge sharing, run peer
+              code reviews, and work inside Agile/Scrum ceremonies — planning, refinement, stand-ups, reviews
+              and retrospectives — coordinating Jira tickets with QA, Product Owners and stakeholders.
+            </p>
           </div>
           <div className={styles.aboutDetails}>
             <div>
@@ -37,6 +42,10 @@ function About({ profile }: AboutProps) {
             <div>
               <strong>Education</strong>
               <span>{profile.education}</span>
+            </div>
+            <div>
+              <strong>Languages</strong>
+              <span>{profile.languages}</span>
             </div>
           </div>
         </div>

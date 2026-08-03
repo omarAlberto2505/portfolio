@@ -24,4 +24,9 @@ export const skills: Skill[] = [
     title: 'AI & Platforms',
     details: 'Microsoft Copilot, MCP protocol, Power Automate, WCF/SOAP, SAP integration',
   },
+  {
+    title: 'Ways of Working',
+    details:
+      'Mentoring, Pair Programming, Agile/Scrum, Jira, Code Reviews, Cross-functional Collaboration, Problem Solving, Communication, Adaptability',
+  },
 ];
