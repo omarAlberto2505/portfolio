@@ -3,10 +3,12 @@ import styles from './Footer.module.scss';
 import clsx from 'clsx';
 import useDecadeStore from '../../store/useDecadeStore';
 import { decades } from '../Ages/specs';
+import { GitHubIcon, LinkedInIcon } from '../icons';
 
 interface FooterProps {
   profile: {
     githubUrl: string;
+    linkedinUrl: string;
   };
 }
 
@@ -27,8 +29,25 @@ function Footer({ profile }: FooterProps) {
         <p>© 2026 Omar Alberto Murillo Moreno. Built for GitHub Pages.</p>
         <div className={styles.footerLinks}>
           <a href="#home">Top</a>
-          <a href={profile.githubUrl} target="_blank" rel="noreferrer">
+          <a
+            className={styles.socialLink}
+            href={profile.githubUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub profile"
+          >
+            <GitHubIcon />
             GitHub
+          </a>
+          <a
+            className={styles.socialLink}
+            href={profile.linkedinUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn profile"
+          >
+            <LinkedInIcon />
+            LinkedIn
           </a>
         </div>
       </div>

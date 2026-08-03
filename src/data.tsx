@@ -10,6 +10,7 @@ export interface Profile {
   summary: string;
   heroCopy: string;
   githubUrl: string;
+  linkedinUrl: string;
 }
 
 export interface Skill {
@@ -53,12 +54,13 @@ export const profile: Profile = {
   heroCopy:
     'I build modern, responsive web experiences that help teams turn ideas into polished digital products while delivering maintainable backend services, AI integrations, and enterprise-grade APIs.',
   githubUrl: 'https://github.com/omarAlberto2505',
+  linkedinUrl: 'https://linkedin.com/in/omar-alberto-murillos-morenos-064574194',
 };
 
 
 export const experience: ExperienceItem[] = [
   {
-    role: 'Software Developer Technician',
+    role: 'Software Developer',
     company: 'Robert Bosch',
     location: 'Juarez, Chihuahua',
     period: '09-2023 – Present',
